@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.wuboznl.bean.Person" table="Person">
+		<id name="id" type="string" column="id">
+			<generator class="uuid"></generator>
+		</id>
+		<component name="name" class="cn.wuboznl.bean.Name">
+			<parent name="owner" />
+			<property name="first" column="first"></property>
+			<property name="last" column="last"></property>
+		</component>
+	</class>
+</hibernate-mapping>

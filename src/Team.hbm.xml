@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.wuboznl.bean.Team" table="team">
+		<id name="id" type="string" column="id">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="name" column="name" type="string"></property>
+
+		<map name="students">
+			<key column="team_id"></key>
+			<index column="name" type="string"></index>
+			<one-to-many class="cn.wuboznl.bean.Student"/>
+		</map>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.wuboznl.bean.User" table="user">
+		<composite-id>
+			<key-property name="cardId" column="cardId" type="string"></key-property>
+			<key-property name="name" column="name" type="string"></key-property>
+		</composite-id>
+		<property name="age" column="age" type="string" ></property>
+	</class>
+</hibernate-mapping>
